@@ -3,8 +3,12 @@ const app = express();
 
 const { NotFoundError, BadRequestError } = require("./expressError");
 
+const foodRoutes = require('./routes/foods')
+const dayRoutes = require('./routes/days')
+const reviewRoutes = require('./routes/review')
+
 app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 
 /** 404 handler: matches unmatched routes; raises NotFoundError. */
