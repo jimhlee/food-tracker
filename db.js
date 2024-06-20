@@ -5,8 +5,8 @@ const { Client } = require("pg");
 // Connects to test db if in testing environment
 // Test db not yet implemented
 const DB_URI = process.env.NODE_ENV === "test"
-    ? "postgresql:///biztime_test"
-    : "postgresql:///biztime";
+    ? "postgresql:///foodtracker_test"
+    : "postgresql:///foodtracker";
 
 const db = new Client({
   connectionString: DB_URI
