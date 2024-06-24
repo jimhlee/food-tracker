@@ -10,6 +10,9 @@ const reviewRoutes = require('./routes/review')
 app.use(express.json());
 // app.use(express.urlencoded());
 
+app.use('/foods', foodRoutes)
+app.use('/day', dayRoutes)
+app.use('/review', reviewRoutes)
 
 /** 404 handler: matches unmatched routes; raises NotFoundError. */
 app.use(function (req, res, next) {
